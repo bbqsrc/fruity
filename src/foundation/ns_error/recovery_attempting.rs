@@ -58,7 +58,7 @@ impl NSErrorRecoveryAttempting<'_> {
         &self,
         error: &NSError,
         recovery_option_index: NSUInteger,
-        delegate: Option<&ObjCObject>,
+        delegate: Option<&ObjCObject<'_>>,
         did_recover_selector: Option<Sel>,
         context_info: *mut c_void,
     ) {

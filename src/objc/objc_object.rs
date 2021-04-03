@@ -49,7 +49,7 @@ impl crate::core::ObjectType for ObjCObject<'_> {
     #[doc(alias = "objc_release")]
     unsafe fn release(obj: NonNull<Self>) {
         extern "C" {
-            fn objc_release(obj: NonNull<ObjCObject>);
+            fn objc_release(obj: NonNull<ObjCObject<'_>>);
         }
         objc_release(obj);
     }

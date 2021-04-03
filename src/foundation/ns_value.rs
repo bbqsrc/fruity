@@ -154,7 +154,7 @@ impl NSValue {
     ///
     /// See [documentation](https://developer.apple.com/documentation/foundation/nsvalue/1410668-pointervalue).
     #[inline]
-    pub fn nonretained_object_value(&self) -> *mut ObjCObject {
+    pub fn nonretained_object_value(&self) -> *mut ObjCObject<'_> {
         unsafe { _msg_send_strict![self, nonretainedObjectValue] }
     }
 }

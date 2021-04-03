@@ -446,7 +446,7 @@ impl NSNumber {
     where
         L: AsRef<ObjCObject<'l>>,
     {
-        let locale: Option<&ObjCObject> = match &locale {
+        let locale: Option<&ObjCObject<'_>> = match &locale {
             Some(locale) => Some(locale.as_ref()),
             None => None,
         };

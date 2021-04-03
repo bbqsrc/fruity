@@ -169,6 +169,7 @@
     target_arch = "aarch64",
 ))]
 #![deny(improper_ctypes)]
+// #![warn(rust_2018_idioms)]
 #![warn(missing_docs)]
 
 pub(crate) mod common;

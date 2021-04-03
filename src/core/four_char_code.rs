@@ -24,7 +24,7 @@ use std::{
 pub struct FourCharCode(u32);
 
 impl fmt::Debug for FourCharCode {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         // Format as escaped ASCII string.
 
         write!(f, "\"")?;
